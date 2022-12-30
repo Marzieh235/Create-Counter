@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 1</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        @font-face {
+            font-family: Shabnam;
+            src: url('Shabnam.eot');
+            src: url('Shabnam.eot?#iefix') format('embedded-opentype'),
+                url('Shabnam.woff2') format('woff2'),
+                url('Shabnam.woff') format('woff'),
+                url('Shabnam.ttf') format('truetype');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: Shabnam;
+            src: url('Shabnam-Bold.eot');
+            src: url('Shabnam-Bold.eot?#iefix') format('embedded-opentype'),
+                url('Shabnam-Bold.woff2') format('woff2'),
+                url('Shabnam-Bold.woff') format('woff'),
+                url('Shabnam-Bold.ttf') format('truetype');
+            font-weight: bold;
+        }
+
+        @font-face {
+            font-family: Shabnam;
+            src: url('Shabnam-Thin.eot');
+            src: url('Shabnam-Thin.eot?#iefix') format('embedded-opentype'),
+                url('Shabnam-Thin.woff2') format('woff2'),
+                url('Shabnam-Thin.woff') format('woff'),
+                url('Shabnam-Thin.ttf') format('truetype');
+            font-weight: 100;
+        }
+
+        @font-face {
+            font-family: Shabnam;
+            src: url('Shabnam-Light.eot');
+            src: url('Shabnam-Light.eot?#iefix') format('embedded-opentype'),
+                url('Shabnam-Light.woff2') format('woff2'),
+                url('Shabnam-Light.woff') format('woff'),
+                url('Shabnam-Light.ttf') format('truetype');
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: Shabnam;
+            src: url('Shabnam-Medium.eot');
+            src: url('Shabnam-Medium.eot?#iefix') format('embedded-opentype'),
+                url('Shabnam-Medium.woff2') format('woff2'),
+                url('Shabnam-Medium.woff') format('woff'),
+                url('Shabnam-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+
+        * {
+            direction: rtl !important;
+            font-family: 'Shabnam', sans-serif !important;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column
+        }
+
+        .start-box {
+            margin: 20px 0;
+        }
+
+        .start-box #input-counter {
+            padding: 7px;
+            width: 300px;
+            outline-color: black;
+            border: 1px solid rgba(0, 0, 0, .4);
+            border-radius: 2px;
+        }
+
+        .start-box #start-counter {
+            border: none;
+            padding: 7px 10px;
+            cursor: pointer;
+            background: #e74c3c;
+            color: white;
+            border-radius: 2px;
+        }
+
+        .message {
+            margin-top: 10px;
+            font-size: .9em;
+        }
+
+        #error-message {
+            color: #e74c3c;
+            font-size: .9em;
+            display: none;
+        }
+
+        #error-message.active {
+            display: block;
+        }
+
+        .message .loading {
+            color: #e74c3c;
+            display: none;
+        }
+
+        .message .success {
+            color: #27ae60;
+            display: none;
+        }
+
+        .c100 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="start-box">
+            <input type="text" id="input-counter" placeholder="زمان مورد نظر خود را به ثانیه وارد کنید">
+            <button id="start-counter">شروع</button>
+        </div>
+        <div id="error-message"></div>
+        <div class="c100 p50">
+            <span>250</span>
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+        <div class="message">
+            <span class="loading">در حال اجرا ...</span>
+            <span class="success">شمارنده با موفقیت به پایان رسید</span>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
